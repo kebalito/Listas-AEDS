@@ -37,3 +37,80 @@ int main()
 }
 
 03.
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int i;
+    int num[21];
+    int vet;
+    srand(time(NULL));
+    for(i=0; i<20; i++)
+    {
+    num[i]= 11+rand()%88;
+    printf("Vetor [%d] = %d\n",i,num[i]);
+    }
+    int soma=0, maior=10,menor=99;
+    float media;
+    for(i=0; i<20; i++)
+    {
+        if(maior<num[i])
+            maior=num[i];
+        if(menor>num[i])
+            menor=num[i];
+    soma=soma+num[i];
+    }
+    media=soma/20;
+    printf("\n\n~~~~ESTATISTICAS DO VETOR~~~~\n\n");
+    printf(" O maior numero eh: %d.\n O menor numero eh: %d.\n A soma eh: %d.\n A media eh: %2.f", maior,menor,soma,media);
+    return 0;
+}
+
+04.
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int i;
+    int num[21];
+    int vet;
+    srand(time(NULL));
+    for(i=0; i<20; i++)
+    {
+    num[i]= 11+rand()%88;
+    printf("Vetor [%d] = %d\n",i,num[i]);
+    }
+    int soma=0, maior=10,menor=99;
+    float media;
+    for(i=0; i<20; i++)
+    {
+        if(maior<num[i])
+            maior=num[i];
+        if(menor>num[i])
+            menor=num[i];
+    soma=soma+num[i];
+    }
+    media=soma/20;
+    printf("\n\n~~~~ESTATISTICAS DO VETOR~~~~\n\n");
+    printf(" O maior numero eh: %d.\n O menor numero eh: %d.\n A soma eh: %d.\n A media eh: %2.f", maior,menor,soma,media);
+
+ printf("\n\n~~~~~~INVERTENDO OS VALORES DO VETOR~~~~~~\n\n");
+    int hold;
+    for(i=0; i<10; i++)
+    {
+        hold=num[i];
+        num[i]=num[19-i];
+        num[19-i]=hold;
+    }
+    for(i=0; i<20; i++)
+        printf("Vetor [%d] = %d\n", i, num[i]);
+
+
+    return 0;
+}
+
+05.
